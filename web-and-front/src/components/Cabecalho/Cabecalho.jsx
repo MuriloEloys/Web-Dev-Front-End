@@ -16,18 +16,18 @@ export default function Cabecalho() {
 
   return (
     <>
-      <header className="cabecalho1">
+      <header>
 
         <div>
-          {/* <button onClick={handleLogout} className={sessionStorage.getItem("token-user") ? "btnLogout":"btn"}>Logout</button>    BOTÃO APRA LOGOUT*/}
+          <button onClick={handleLogout} className={sessionStorage.getItem("token-user") ? "btnLogout":"btn"}>Logout</button>
         </div>
         <nav>
           <ul>
             <li><Link to="/" className={rotaAtual.pathname == "/" ? "active" : ""}>Home</Link> </li>
-            {/* <li><Link to="/login" className={rotaAtual.pathname == "/login" ? "active" : ""}>Login</Link> </li> */}
+            <li><Link to="/login" className={rotaAtual.pathname == "/login" ? "active" : ""}>Login</Link> </li>
           </ul>
         </nav>
-        <div className="welcome">
+        <div>
           <p>{obJUser != null ?  `Olá ${obJUser.name}`:""}</p>
           <p>{obJUser != null ?  obJUser.email :""}</p>
         </div>
