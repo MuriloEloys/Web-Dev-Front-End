@@ -28,8 +28,8 @@ export default function Cabecalho() {
           </ul>
         </nav>
         <div>
-          <p>{obJUser != null ?  `Olá ${obJUser.name}`:""}</p>
-          <p>{obJUser != null ?  obJUser.email :""}</p>
+          <p>{obJUser != null ?  `Olá ${obJUser.nome}`:""}</p>
+          <p>{obJUser != null ?  `E-mail registrado : ${obJUser.email}` :""}</p>
         </div>
       </header>
     </>

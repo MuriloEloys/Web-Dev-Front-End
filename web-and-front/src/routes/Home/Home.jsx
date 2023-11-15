@@ -6,5 +6,6 @@ export default function Home() {
         )}
     else{
         window.location="/login"
+        alert("É necessário fazer login para ter acesso à essa página")
     }
 }

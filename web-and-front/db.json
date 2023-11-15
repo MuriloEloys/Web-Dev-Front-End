@@ -41,6 +41,18 @@
       "email": "alo@gmailcom",
       "senha": "12345",
       "id": 7
+    },
+    {
+      "nome": "fodase",
+      "email": "fodase@gmail.com",
+      "senha": "fodase",
+      "id": 8
+    },
+    {
+      "nome": "Murilo",
+      "email": "muri.mar29@gmail.com",
+      "senha": "123456",
+      "id": 9
     }
   ]
 }
