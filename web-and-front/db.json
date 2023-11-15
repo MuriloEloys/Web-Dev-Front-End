@@ -1,19 +1,46 @@
 {
-  "posts": [
+  "usuarios": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "email": "vict.Nie@icloud.com",
+      "name": "Victoria Nielsen",
+      "senha": "mollis."
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "email": "levpet@outlook.net",
+      "name": "Lev Peters",
+      "senha": "blandit"
+    },
+    {
+      "id": 3,
+      "email": "Pet.La@hotmail.couk",
+      "name": "Petra Larsen",
+      "senha": "sagittis"
+    },
+    {
+      "id": 4,
+      "email": "wall@hotmail.org",
+      "name": "Whoopi Wallace",
+      "senha": "id"
+    },
+    {
+      "id": 5,
+      "email": "vaugh@hotmail.edu",
+      "name": "Vaughan Boone",
+      "senha": "et,"
+    },
+    {
+      "nome": "demon",
+      "email": "arombado@fasf.com",
+      "senha": "123254",
+      "id": 6
+    },
+    {
+      "nome": "alo",
+      "email": "alo@gmailcom",
+      "senha": "12345",
+      "id": 7
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
