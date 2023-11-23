@@ -1,11 +1,14 @@
 .Links{
     display: flex;
-    align-self: center;
-    max-height: 5%;
-    max-width: 5%;
+    min-height: 70%;
+    min-width: 90%;
+    border: 2px solid black;
+    padding: 5%;
     p{
         text-align: center;
         margin: 10px;
-
+        border: 2px solid black;
+        width: 200px;
+        height: 100px;
     }
 }
