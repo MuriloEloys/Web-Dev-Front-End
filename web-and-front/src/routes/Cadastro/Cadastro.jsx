@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
+import './Cadastro.scss'
 
 
 export default function Cadastro() {
@@ -39,7 +40,7 @@ export default function Cadastro() {
     }
 
   return (
-    <div>
+    <div className="cadastrar-container">
         <h1>Cadastrar</h1>
 
         <div className="form-cad">

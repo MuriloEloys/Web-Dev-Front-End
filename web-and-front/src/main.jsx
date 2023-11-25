@@ -4,8 +4,9 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './routes/Home/Home.jsx'
 import Erro404 from './routes/Erro404.jsx'
-import Login from "./routes/Login.jsx"
-import Cadastro from './routes/Cadastro.jsx'
+import Login from "./routes/Login/Login.jsx"
+import Cadastro from './routes/Cadastro/Cadastro.jsx'
+import Ideia from './routes/Ideia/Ideia.jsx'
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     {path:"/", element:<Home/>},
     {path:"/login",element:<Login/>},
     {path:"/cadastro",element:<Cadastro/>},
+    {path:"/ideia",element:<Ideia/>},
   ]
  }
 ])

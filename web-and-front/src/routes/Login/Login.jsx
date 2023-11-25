@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom";
+import './Login.scss'
 
 export default function Login() {
 
@@ -14,6 +15,12 @@ export default function Login() {
         const {name,value} = e.target;
         setUsuario({...usuario,[name]:value});
     }
+
+    const handleLogout = ()=>{
+        sessionStorage.removeItem("token-user");
+        sessionStorage.removeItem("data-user");
+        navigate("/login");
+      }
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
@@ -52,13 +59,13 @@ export default function Login() {
     }
 
   return (
-    <div>
+    <div className="container-login">
         <h1>Login</h1>
 
         <div className="form-login">
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                    <legend>User Information:</legend>
+                    <legend>Informação do usuário:</legend>
                     <div>
                         <label htmlFor="idEmail">Email:</label>
                         <input type="email" name="email" id="idEmail" placeholder="Digite seu email." value={usuario.email} onChange={handleChange}/>
@@ -69,6 +76,7 @@ export default function Login() {
                     </div>
                     <div>
                         <button>LOGIN</button>
+                        <button onClick={handleLogout} className={sessionStorage.getItem("token-user") ? "btnLogout":"btn"}>Logout</button>
                     </div>
                     <div>
                         <p>Se você ainda não é registrado. <Link to="/cadastro">CLIQUE AQUI</Link></p>

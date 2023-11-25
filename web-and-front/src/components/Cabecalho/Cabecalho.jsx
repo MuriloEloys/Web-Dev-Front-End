@@ -4,30 +4,27 @@ import "./Cabecalho.scss";
 export default function Cabecalho() {
 
   const rotaAtual = useLocation();
-  const navigate = useNavigate();
+
 
   const obJUser = JSON.parse(sessionStorage.getItem("data-user"));
 
-  const handleLogout = ()=>{
-    sessionStorage.removeItem("token-user");
-    sessionStorage.removeItem("data-user");
-    navigate("/login");
-  }
 
   return (
     <>
       <header>
 
-        <div>
-          <button onClick={handleLogout} className={sessionStorage.getItem("token-user") ? "btnLogout":"btn"}>Logout</button>
-        </div>
-        <nav>
-          <ul className="Links">
-            <p><Link to="/" className={rotaAtual.pathname == "/" ? "active" : ""}>Home</Link></p>
+        <div className="container">
+          <div className="logo">
+            <img src="../img/logo.jpeg" alt="" />
+          </div>
+          <ul className="links">
             <p><Link to="/login" className={rotaAtual.pathname == "/login" ? "active" : ""}>Login</Link></p>
+            <p><Link to="/cadastro" className={rotaAtual.pathname == "/cadastro" ? "active" : ""}>cadastro</Link></p>
+            <p><Link to="/" className={rotaAtual.pathname == "/" ? "active" : ""}>Home</Link></p>
+            <p><Link to="/ideia" className={rotaAtual.pathname == "/ideia" ? "active" : ""}>Ideia</Link></p>
           </ul>
-        </nav>
-        <div>
+        </div>
+        <div className="saudacoes">
           <p>{obJUser != null ?  `Olá ${obJUser.nome}`:""}</p>
           <p>{obJUser != null ?  `E-mail registrado : ${obJUser.email}` :""}</p>
         </div>
